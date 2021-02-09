@@ -5,13 +5,10 @@
 <!-- Pass in data from server.js -->
 <ul>
   {{#each burger}}
-  	<li>
-      <p><span class="label">Burger:</span> {{this.burger}}</p>
-
-      <button data-id="{{this.id}}" class="delquote">Devour it!</button>
-
-      <a href="/{{this.id}}">Update this quote</a>
-  	</li>
+  <li>
+    <p><span class="label">Burger:</span> {{this.burger}}</p>
+    <button data-id="{{this.id}}" class="delquote">Devour it!</button>
+  </li>
   {{/each}}
 </ul>
 
@@ -21,13 +18,8 @@
 
   <div class="form-group">
     <label for="burger">Burger:</label>
-    <input type="text" id="burger" name="burger" placeholder="Enter burger name">
+    <input type="text" id="burger_name" name="burger" placeholder="Enter burger name">
   </div>
-
-  {{!-- <div class="form-group">
-    <label for="quo">Quote:</label>
-    <textarea id="quo" name="quote" rows="8" cols="40"></textarea>
-  </div> --}}
 
   <button type="submit">Add the burger</button>
 </form>
