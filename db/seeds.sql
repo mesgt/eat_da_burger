@@ -5,3 +5,4 @@ INSERT INTO burgers (burger_name) VALUES ('Double Cheeseburger');
 INSERT INTO burgers (burger_name) VALUES ('Mega Burger');
 INSERT INTO burgers (burger_name) VALUES ('Mega Salad Burger');
 INSERT INTO burgers (burger_name) VALUES ('Texas Burger');
+INSERT INTO burgers (burger_name) VALUES ('Testing Burger');

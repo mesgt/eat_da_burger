@@ -10,16 +10,43 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<script src="/assets/js/quotes.js"></script>
-		<title>Eat Da Burger App</title>
+		<title>Eat Da Burger</title>
 	</head>
 
 	<body>
-<img src="../../assets/images/hamburger.jpg" class="img-fluid" alt="Responsive image">
+		<div class="mx-auto">
+			<h1 id="header">Eat Da Burger...If You Can Catch Da Burger</h1>
+		</div>
+		<img id="runBurger" src="../../assets/images/burgerApp.gif" class="img-fluid" alt="Responsive image" />
 
 		{{{ body }}}
 
-	</body>
 
+		{{!-- <div class="input-group mb-5">
+			<form class="form-inline">
+			<label id="">Burger:</label>
+			<input type="text" class="form-control" id="burgerName" name="burger" placeholder="Enter burger name">
+			<div class="input-group-append">
+				<class class="btn btn-outline-secondary" type="button">Submit</class>
+			</div>
+			</form>
+		</div> --}}
+
+		<form class="form-inline">
+  <div class="form-group mb-2">
+    {{!-- <label for="staticEmail2" class="sr-only">Email</label> --}}
+    <input type="text" id="inputLabel" class="form-control-plaintext" value="Your Next Burger:">
+  </div>
+  <div class="form-group mx-sm-3 mb-2">
+    {{!-- <label class="sr-only">Enter Burger Name</label> --}}
+    <input type="text" class="form-control" placeholder="Enter Burger Name">
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Submit</button>
+</form>
+		<div class="d-block p-2 text-black">
+			<h5 id="userMessage">Enter a burger you would like to eat and click "Submit".</h5>
+		</div>
+	</body>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
 		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"

@@ -16,8 +16,6 @@ var orm = { //establishes a relationship between two tables, but we only have 1 
       if (err) throw err;
       // console.log(result);
       cb(result);
-      //if the result has a consumed value of true, it will be displayed in list "devoured"
-      //else if the value is false, it will be displayed in list "!devoured"
     });
   },
 }
