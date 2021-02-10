@@ -22,17 +22,9 @@ li {
   margin-bottom: 5px;
 }
 
-/* #inputLabel {
-  text-justify: right;
-} */
-
-/* .form-inline .form-control-plaintext {
-  text-justify: right !important;
-} */
-
 #runBurger {
   width: 100%;
-  height: 250px;
+  height: 180px;
 }
 
 #header {
@@ -41,6 +33,20 @@ li {
   font-stretch: ultra-expanded;
 }
 
+#toBeEaten {
+  background-color: cornsilk;
+}
+
+#eaten {
+background-color: rgb(138, 137, 134);
+}
+
 #userMessage {
   text-align: center;
+}
+
+h4 {
+  text-align: center;
+  font-variant: small-caps;
+  font-weight: bold;
 }

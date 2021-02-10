@@ -14,35 +14,24 @@
 	</head>
 
 	<body>
+		<img id="runBurger" src="../../assets/images/burgerApp.gif" class="img-fluid" alt="Responsive image" />
 		<div class="mx-auto">
 			<h1 id="header">Eat Da Burger...If You Can Catch Da Burger</h1>
 		</div>
-		<img id="runBurger" src="../../assets/images/burgerApp.gif" class="img-fluid" alt="Responsive image" />
+		
 
 		{{{ body }}}
 
 
-		{{!-- <div class="input-group mb-5">
-			<form class="form-inline">
-			<label id="">Burger:</label>
-			<input type="text" class="form-control" id="burgerName" name="burger" placeholder="Enter burger name">
-			<div class="input-group-append">
-				<class class="btn btn-outline-secondary" type="button">Submit</class>
-			</div>
-			</form>
-		</div> --}}
-
-		<form class="form-inline">
-  <div class="form-group mb-2">
-    {{!-- <label for="staticEmail2" class="sr-only">Email</label> --}}
-    <input type="text" id="inputLabel" class="form-control-plaintext" value="Your Next Burger:">
-  </div>
-  <div class="form-group mx-sm-3 mb-2">
-    {{!-- <label class="sr-only">Enter Burger Name</label> --}}
+<br><br><br>
+<div id="userInput">
+		<form class="form-inline justify-content-center">
+  <div class="form-group">
     <input type="text" class="form-control" placeholder="Enter Burger Name">
   </div>
-  <button type="submit" class="btn btn-primary mb-2">Submit</button>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+</div>
 		<div class="d-block p-2 text-black">
 			<h5 id="userMessage">Enter a burger you would like to eat and click "Submit".</h5>
 		</div>
