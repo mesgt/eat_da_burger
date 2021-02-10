@@ -3,19 +3,19 @@ var connection = require("./connection.js");
 
 var orm = { //establishes a relationship between two tables, but we only have 1 table.
   
-  addBurger: function(burger_name) {
-  var queryString = "INSERT INTO burgers (burger_name) VALUES ??";
-  connection.query(queryString, [req.body.burger_name], function (err, result) { //check on the query extension being used.
+  addBurger: function(burgerName) {
+  var queryString = "INSERT INTO burgers (burger_name) VALUES ?";
+  connection.query(queryString, [burgerName], function (err, result) { //check on the query extension being used.
     if (err) throw err;
-    console.log(req)
+    console.log(result)
   });
   },
 
-  displayBurger: function(burger_name) {
-    var queryString = "SELECT * FROM burgers WHERE ??";
-    connection.query(queryString, [burger_name], function(err, result) {
+  displayAllBurgers: function(cb) {
+    connection.query("SELECT * FROM burgers", function(err, result) {
       if (err) throw err;
-      console.log(result);
+      // console.log(result);
+      cb(result);
       //if the result has a consumed value of true, it will be displayed in list "devoured"
       //else if the value is false, it will be displayed in list "!devoured"
     });
