@@ -11,10 +11,12 @@ var orm = {
     });
   },
 
-  addBurger: function(burgerName) {
+  addBurger: function(burgerName, cb) {
   var queryString = "INSERT INTO burgers (burger_name) VALUES (?)";
-  connection.query(queryString, [burgerName], function (err, result) { //check on the query extension being used.
+  // console.log("random");
+  connection.query(queryString, burgerName, function (err, result) { //check on the query extension being used.
     if (err) throw err;
+    cb(result);
     console.log(result)
   });
   },

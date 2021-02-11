@@ -5,7 +5,7 @@ var orm = require("./config/orm.js");
 var app = express();
 var PORT = process.env.PORT || 8082;
 
-app.use(express.static("./public"));
+app.use(express.static("public"));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json()); //read json obj, can now use res.json
@@ -21,10 +21,12 @@ app.get("/", function (req, res) { //WORKS
     });
 });
 
-app.post("/api/burgers", function (req, res) {
-    orm.addBurger(function (response) {
-        console.log(response);
+app.post("/api/burgers/", function (req, res) {
+    // console.log("i don't like this app")
+    orm.addBurger(req.body.burgerName, function (response) {
+        console.log("test" + response);
         res.json({ id: response.insertId });
+        // res.redirect("/")
     });
 });
 

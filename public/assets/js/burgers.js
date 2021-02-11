@@ -1,14 +1,14 @@
 $(function () {
 
     //ADD a burger
-    $(".create-form").on("submit", function (event) {
+    $("#submitBtn").on("click", function (event) {
         event.preventDefault();
         var newBurger = {
             burgerName: $("#burgerName").val().trim(),
         };
-
+        console.log($("#burgerName").val().trim())
         // Send the POST request.
-        $.ajax("/api/burgers", {
+        $.ajax("/api/burgers/", {
             type: "POST",
             data: newBurger
         }).then(

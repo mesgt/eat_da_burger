@@ -9,7 +9,7 @@
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<script src="/assets/js/quotes.js"></script>
+		
 		<title>Eat Da Burger</title>
 	</head>
 
@@ -18,20 +18,28 @@
 		<div class="mx-auto">
 			<h1 id="header">Eat Da Burger...If You Can Catch Da Burger</h1>
 		</div>
-		
+
 
 		{{{ body }}}
 
 
-<br><br><br>
-<div id="userInput">
-	<form class="form-inline justify-content-center">
-  <div class="form-group">
-    <input type="text" id="burgerName" name="newBurgerName" class="form-control" placeholder="Enter Burger Name">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-</div>
+		<br><br><br>
+		<div id="userInput">
+
+			<form id='burgerInput'>
+				<!--Instead of form being the route, I could just do an ajax call on submit button click -->
+				<textarea type="text" id="burgerName" placeholder='Eat Me'></textarea>
+				<br>
+				<button type="submit" id='submitBtn' class='btn btn-danger'>Flip Dat Burger</button>
+
+				{{!-- <form class="form-inline justify-content-center">
+					<div class="form-group">
+						<input type="text" id="burgerName" name="burgerName" class="form-control"
+							placeholder="Enter Burger Name">
+					</div>
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</form> --}}
+		</div>
 		<div class="d-block p-2 text-black">
 			<h5 id="userMessage">Enter a burger you would like to eat and click "Submit".</h5>
 		</div>
@@ -43,5 +51,6 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 		crossorigin="anonymous"></script>
+		<script src="/assets/js/burgers.js"></script>
 
 	</html>
