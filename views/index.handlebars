@@ -2,16 +2,16 @@
 
 <div class="container">
   <div class="row justify-content-md-center">
-    <div id="toBeEaten" class="col col-md-6">
+    <div id="toBeEaten" class="col col-md-5">
       <h4>Your Order</h4>
       <br>
       <ul style="list-style: none;">
         {{#each burgers}}
         {{#unless this.consumed}}
         <li>
-          <class class="label"> {{this.burger_name}}
+          <p class="label"> {{this.burger_name}}
           <button id="eatIt" data-id="{{this.id}}" class="eatBuger">Devour it!</button>
-          <button id="dumpIt" data-id="{{this.id}}" class="delBurger">X</button></class>
+          <button id="dumpIt" data-id="{{this.id}}" class="delBurger">X</button></p>
         </li>
         {{/unless}}
         {{/each}}
@@ -23,11 +23,11 @@
     <div id="eaten" class="col col-md-5">
       <h4>In Your Stomach</h4>
       <br>
-      <ul>
+      <ul style="list-style: none;">
         {{#each burgers}}
         {{#if this.consumed}}
         <li>
-          <p><span class="label">Burger:</span> {{this.burger_name}}</p>
+          <p id="stomachContent"class="label"> {{this.burger_name}}</p>
         </li>
         {{/if}}
         {{/each}}

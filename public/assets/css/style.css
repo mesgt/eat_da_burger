@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(79, 174, 187) !important;
+  background-color: rgb(246, 239, 169) !important;
 }
 
 li {
@@ -34,13 +34,23 @@ li {
 }
 
 #toBeEaten {
-  background-color: cornsilk;
+  background-color: rgb(204, 231, 179);
   padding: 5px;
   text-align: center;
 }
 
 #eaten {
-background-color: rgb(138, 137, 134);
+background-color: rgb(184, 183, 164);
+text-align: center;
+}
+
+#stomachContent {
+  color: rgb(104, 102, 102);
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
 
 #userMessage {

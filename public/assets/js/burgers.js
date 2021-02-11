@@ -1,20 +1,5 @@
 $(function () {
 
-    //DELETE burger
-    $(".delBurger").on("click", function (event) {
-        var id = $(this).data("id");
-
-        // Send the DELETE request.
-        $.ajax("/api/burgers/" + id, {
-            type: "DELETE"
-        }).then(
-            function () {
-                console.log("deleted id ", id);
-                location.reload();
-            }
-        );
-    });
-
     //ADD a burger
     $(".create-form").on("submit", function (event) {
         event.preventDefault();
@@ -34,25 +19,40 @@ $(function () {
         );
     });
 
-    //Consume burger status
-    $(".update-form").on("submit", function (event) {
-        event.preventDefault();
+    //DELETE burger
+    // $(".delBurger").on("click", function (event) {
+    //     var id = $(this).data("id");
 
-        var consumedBurger = {
-            burgerName: $("#burgerName").val().trim(),
-        };
+    //     // Send the DELETE request.
+    //     $.ajax("/api/burgers/" + id, {
+    //         type: "DELETE"
+    //     }).then(
+    //         function () {
+    //             console.log("deleted id ", id);
+    //             location.reload();
+    //         }
+    //     );
+    // });
 
-        var id = $(this).data("id");
+    // //Consume burger status
+    // $(".update-form").on("submit", function (event) {
+    //     event.preventDefault();
 
-        // Send the POST request.
-        $.ajax("/api/burgers/" + id, {
-            type: "PUT",
-            data: consumedBurger
-        }).then(
-            function () {
-                console.log("You ate da burger!");
-                location.reload();
-            }
-        );
-    });
+    //     var consumedBurger = {
+    //         burgerName: $("#burgerName").val().trim(),
+    //     };
+
+    //     var id = $(this).data("id");
+
+    //     // Send the POST request.
+    //     $.ajax("/api/burgers/" + id, {
+    //         type: "PUT",
+    //         data: consumedBurger
+    //     }).then(
+    //         function () {
+    //             console.log("You ate da burger!");
+    //             location.reload();
+    //         }
+    //     );
+    // });
 });

@@ -12,3 +12,12 @@ CREATE TABLE burgers
 	PRIMARY KEY (id)
 );
 SELECT * FROM burgers;
+SELECT * FROM burgers WHERE consumed = 1;
+
+UPDATE burgers SET consumed = 1 WHERE id = 2;
+UPDATE burgers SET consumed = 1 WHERE id = 1;
+UPDATE burgers SET consumed = 1 WHERE id = 4;
+
+DELETE FROM burgers WHERE id = 15;
+
+
