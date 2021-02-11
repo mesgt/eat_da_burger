@@ -18,23 +18,40 @@ app.get("/", function (req, res) {
     orm.displayAllBurgers(function(response) {
         console.log(response);
         res.render("index", {burgers:response})
-    })
+    });
 });
 
-// ADD a new burger
-// app.post("/api/burgers", function (req, res) {
-//     console.log(req.body)
-//     connection.query("INSERT INTO burgers (burger_name) VALUES ??", [req.body.], function (err, result) {
-//         if (err) {
-//             return res.status(500).end();
-//         }
+app.post("/api/burgers", function(req, res) {
+    orm.addBurger(function(response) {
+        console.log(response);
+        res.json({id:response.insertId});
+    });
+});
 
-//         // Send back the ID of the new plan
-//         res.json({ id: result.insertId });
-//         console.log({ id: result.insertId });
-//     });
-// });
+app.delete("/api/burgers", function(req, res) {
+    orm.deleteBurger(function(response) {
+        console.log(response);
+        if(response.affectedRows === 0) {
+            return res.status(404).end();
+        }
+        res.status(200).end();
+    });
+});
 
+app.put("/api/burgers/:id", function(req, res) {
+    var condition = "id = " + req.params.id;
+    console.log("condition", condition);
+
+    orm.updateBurger({
+        burgerName: 
+    })
+
+    if(response.body.consumed === "0") {
+        orm.updateBurger(function(response) {
+        console.log(response);
+        })
+    }
+})
 
 
 app.listen(PORT, function() {

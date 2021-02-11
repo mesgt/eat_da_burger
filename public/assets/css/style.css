@@ -35,6 +35,8 @@ li {
 
 #toBeEaten {
   background-color: cornsilk;
+  padding: 5px;
+  text-align: center;
 }
 
 #eaten {

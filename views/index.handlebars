@@ -2,15 +2,16 @@
 
 <div class="container">
   <div class="row justify-content-md-center">
-    <div id="toBeEaten" class="col col-md-4">
+    <div id="toBeEaten" class="col col-md-6">
       <h4>Your Order</h4>
       <br>
-      <ul>
+      <ul style="list-style: none;">
         {{#each burgers}}
         {{#unless this.consumed}}
         <li>
-          <p class="label"> {{this.burger_name}}
-          <button data-id="{{this.id}}" class="delquote">Devour it!</button></p>
+          <class class="label"> {{this.burger_name}}
+          <button id="eatIt" data-id="{{this.id}}" class="eatBuger">Devour it!</button>
+          <button id="dumpIt" data-id="{{this.id}}" class="delBurger">X</button></class>
         </li>
         {{/unless}}
         {{/each}}
@@ -19,7 +20,7 @@
     <div class="col-md-1">
       {{!-- Variable width content --}}
     </div>
-    <div id="eaten" class="col col-md-4">
+    <div id="eaten" class="col col-md-5">
       <h4>In Your Stomach</h4>
       <br>
       <ul>
