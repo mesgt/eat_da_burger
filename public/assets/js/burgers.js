@@ -1,7 +1,7 @@
 $(function () {
 
     //ADD a burger
-    $("#submitBtn").on("click", function (event) { //WORKS
+    $("#submitBtn").on("click", function (event) {
         event.preventDefault();
         var newBurger = {
             burgerName: $("#burgerName").val().trim(),
@@ -11,8 +11,7 @@ $(function () {
         $.ajax("/api/burgers/", {
             type: "POST",
             data: newBurger
-        }).then(
-            function () {
+        }).then(function () {
                 location.reload();
             }
         );
@@ -21,13 +20,10 @@ $(function () {
     // DELETE burger
     $(".delBurger").on("click", function (event) {
         var id = this.id;
-        console.log(id)
         // Send the DELETE request.
         $.ajax("/api/burgers/" + id, {
             type: "DELETE"
-        }).then(
-            function () {
-                console.log("deleted id ", id);
+        }).then(function () {
                 location.reload();
             }
         );
@@ -40,9 +36,8 @@ $(function () {
         // Send the POST request.
         $.ajax("/api/burgers/" + id, {
             type: "PUT"
-        }).then(
-            function () {
-            location.reload();
+        }).then(function () {
+                location.reload();
             }
         );
     });

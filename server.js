@@ -14,17 +14,15 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" })); //defines this engi
 app.set("view engine", "handlebars"); //can now use res.render
 
 // Use Handlebars to render the main index.html page with the burgers in it.
-app.get("/", function (req, res) { 
+app.get("/", function (req, res) {
     orm.displayAllBurgers(function (response) {
-        // console.log(response);
         res.render("index", { burgers: response }) //returns back html data
     });
 });
 
-app.post("/api/burgers/", function (req, res) { 
-        orm.addBurger(req.body.burgerName, function (response) {
-        // consol
-            res.json({ id: response.insertId });
+app.post("/api/burgers/", function (req, res) {
+    orm.addBurger(req.body.burgerName, function (response) {
+        res.json({ id: response.insertId });
     });
 });
 
@@ -36,12 +34,11 @@ app.delete("/api/burgers/:id", function (req, res) {
 });
 
 app.put("/api/burgers/:id", function (req, res) {
-    orm.updateBurger(req.params.id, function(response) {
+    orm.updateBurger(req.params.id, function (response) {
         console.log("You ate da burger!");
         res.send("over")
     })
 })
-
 
 app.listen(PORT, function () {
     console.log("Server listening on: http://localhost:" + PORT);
