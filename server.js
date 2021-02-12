@@ -14,44 +14,33 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" })); //defines this engi
 app.set("view engine", "handlebars"); //can now use res.render
 
 // Use Handlebars to render the main index.html page with the burgers in it.
-app.get("/", function (req, res) { //WORKS
+app.get("/", function (req, res) { 
     orm.displayAllBurgers(function (response) {
         // console.log(response);
-        res.render("index", { burgers: response })
+        res.render("index", { burgers: response }) //returns back html data
     });
 });
 
-app.post("/api/burgers/", function (req, res) {
-    // console.log("i don't like this app")
-    orm.addBurger(req.body.burgerName, function (response) {
-        console.log("test" + response);
-        res.json({ id: response.insertId });
-        // res.redirect("/")
+app.post("/api/burgers/", function (req, res) { 
+        orm.addBurger(req.body.burgerName, function (response) {
+        // consol
+            res.json({ id: response.insertId });
     });
 });
 
-// app.delete("/api/burgers", function (req, res) {
-//     orm.deleteBurger(function (response) {
-//         // console.log(response);
-//         if (response.affectedRows === 0) {
-//             return res.status(404).end();
-//         }
-//         res.status(200).end();
-//     });
-// });
+app.delete("/api/burgers/:id", function (req, res) {
+    orm.deleteBurger(req.params.id, function (response) {
+        console.log(response);
+        res.send("over")
+    });
+});
 
-// app.put("/api/burgers/:id", function (req, res) {
-//     orm.updateBurger(function(response) {
-//         // console.log(response);
-//         res.json({ id: response.insertId });
-//     })
-
-//     // if (response.body.consumed === "0") {
-//     //     orm.updateBurger(function (response) {
-//     //         console.log(response);
-//     //     })
-//     // }
-// })
+app.put("/api/burgers/:id", function (req, res) {
+    orm.updateBurger(req.params.id, function(response) {
+        console.log("You ate da burger!");
+        res.send("over")
+    })
+})
 
 
 app.listen(PORT, function () {

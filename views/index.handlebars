@@ -10,15 +10,15 @@
         {{#unless this.consumed}}
         <li>
           <p class="label"> {{this.burger_name}}
-          <button id="eatIt" data-id="{{this.id}}" class="eatBuger">Devour it!</button>
-          <button id="dumpIt" data-id="{{this.id}}" class="delBurger">X</button></p>
+          <button type="submit" id="{{this.id}}" class="eatBurger">Devour it!</button>
+          <button type="submit" id="{{this.id}}" class="delBurger">X</button></p>
         </li>
         {{/unless}}
         {{/each}}
       </ul>
     </div>
     <div class="col-md-1">
-      {{!-- Variable width content --}}
+
     </div>
     <div id="eaten" class="col col-md-5">
       <h4>In Your Stomach</h4>
