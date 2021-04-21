@@ -1,41 +1,51 @@
-# Node Express Handlebars
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+# Eat Da Burger
+
+Fun way to track your delicious burgers.
+
+
+## Deployed Link
+
+
+
+![Demo](./public/assets/images/fullBurgerApp.gif)
+
+# Application Details
+
+## Purpose
+
+This app was a fun project to practice React and handlebars.
+
 
 ## Description 
 This simple application uses MySQL, Node, Express, Handlebars and a homemade ORM to query and route data in the app and generate HTML. A burger name is added by the user and then displayed in the 'Your Order' column. The user then has an option to either delete the burger or 'Devour It!'. If the user wants to delete the item, they can click on the 'X' and if they are happy with their burger choice, they can devour it. In this case, the burger name is moved to another column labeled 'In Your Stomach'.  
 
-## Links 
 
-GitHub site: https://github.com/mesgt/node_express_handlebars
-Published site: https://infinite-savannah-89804.herokuapp.com/ 
+## Technologies
 
-## Table of Contents
-
-* [Description](#Description) 
-* [Links](#Links)
-* [Installation](#Installation)
-* [Usage](#Usage)
-* [Credits](#Credits)
-* [License](#License)
-* [Badges](#Badges)
+<li>MySQL</li>
+<li>NodeJS</li>
+<li>Express</li>
+<li>Handlebars</li>
 
 
-## Installation
-N/A
+## Future Development
 
-## Usage
+Ideas for future development include:
+1. Editing the graphic at the top to look less stretched out
+2. Replace 'X' with a delete button
+3. Add clear button for the entire page
 
-<img src="./public/assets/images/burger.png" alt="Burger App Example" width="300" />
-
-![](./public/assets/images/fullBurgerApp.gif)
-
-## Credits
-N/A
 
 ## License
-The Unlicense
 
-## Badges
-N/A
+Licensed under the [MIT](https://opensource.org/licenses/MIT) license.
+
+## GitHub
+
+https://github.com/mesgt/eat_da_burger
+
 
 ## Contributing
 
